@@ -15,7 +15,7 @@ echo "   Iniciando a Limpeza do sistema para: $REAL_USER"
 echo "--------------------------------------------------"
 
 echo "[1/7] Esvaziando a Lixeira..."
-sudo rm -rf $USER_HOME/.local/share/Lixeira/*
+sudo rm -rf $USER_HOME/.local/share/Trash/*
 
 echo "[2/7] Apagando Arquivos Temporários do Sistema..."
 sudo rm -rf /var/tmp/*
