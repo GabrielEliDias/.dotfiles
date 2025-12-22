@@ -1,16 +1,15 @@
 #!/bin/bash
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LIST_FILE="$SCRIPT_DIR/scripts/lists/games.txt"
+LIST_FILE="$SCRIPT_DIR/scripts/lists/all.txt"
 APT_TO_INSTALL=""
 MANUAL_STEPS=()
 
 echo "--------------------------------------------------"
-echo "      🎮 Setup de Gaming (Híbrido)"
+echo "      🎮 Setup de instalção completo (Híbrido)"
 echo "--------------------------------------------------"
 
-# 1. Pré-requisitos para Gaming no Debian (32-bit arch)
-echo ">> Habilitando arquitetura 32-bit (necessário para Steam/Wine)..."
+echo ">> Habilitando arquitetura 32-bit..."
 sudo dpkg --add-architecture i386
 sudo apt update -qq
 
@@ -22,7 +21,7 @@ if ! command -v snap &> /dev/null; then sudo apt install snapd -y; fi
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo ""
-echo ">> Lendo lista de jogos e ferramentas..."
+echo ">> Lendo lista de programas e ferramentas..."
 
 # Loop linha por linha
 while IFS= read -r line || [ -n "$line" ]; do
@@ -87,4 +86,4 @@ else
 fi
 
 echo ""
-echo "Setup Gaming concluído!"
+echo "Setup Completo concluído!"
