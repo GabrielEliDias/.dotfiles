@@ -1,0 +1,23 @@
+# --- Utilitários Básicos ---
+curl
+wget
+git
+htop
+btop      # Visualizador de recursos moderno
+neofetch
+tree      # Visualizador de diretórios
+vim       # Editor de texto terminal
+tmux      # Multiplexador de terminal
+
+# --- Compactação ---
+unzip
+p7zip-full
+unrar
+
+# --- Multimídia e Desktop ---
+vlc
+gimp
+flameshot # Melhor ferramenta de Print Screen
+
+# --- Outros ---
+# discord  <-- O Discord no Debian geralmente é melhor via Flatpak ou .deb manual
