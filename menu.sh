@@ -7,7 +7,7 @@ CYAN='\033[0;36m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-BASE_DIR="./scripts"
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 pause() {
     echo ""
@@ -49,11 +49,11 @@ while true; do
             pause
             ;;
         4)
-            sudo $BASE_DIR/security/config_warp_client.sh #pronto!
+            sudo $BASE_DIR/scripts/security/config_warp_client.sh #pronto!
             pause
             ;;
         5)  
-            sudo $BASE_DIR/maintenance/maintenance_menu.sh #pronto!
+            sudo $BASE_DIR/scripts/maintenance/maintanance_menu.sh #pronto!
             pause
             ;;
         0)
