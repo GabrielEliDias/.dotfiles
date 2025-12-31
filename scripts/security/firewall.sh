@@ -3,7 +3,7 @@
 set -e 
 
 echo "--------------------------------------------------"
-echo "      Iniciando a instalação e configuração do UFW"
+echo "   Iniciando a instalação e configuração do UFW"
 echo "--------------------------------------------------"
 
 echo "[1/6] Baixando e instalando o UFW..."
