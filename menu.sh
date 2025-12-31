@@ -25,12 +25,12 @@ while true; do
     show_header
     echo -e "${YELLOW}Selecione uma opção:${NC}"
     echo ""
-    echo -e "  ${GREEN}1)${NC} 🔧 Setup Inicial (Git & SSH)"
-    echo -e "  ${GREEN}2)${NC} 📦 Instalar Apps (Lista Híbrida)"
-    echo -e "  ${GREEN}3)${NC} 🎮 Instalar Gaming Mode (Steam/Lutris)"
-    echo -e "  ${GREEN}4)${NC} 🛡️  Segurança (Firewall + Warp VPN)"
-    echo -e "  ${GREEN}5)${NC} 🧹 Manutenção Completa (Limpeza + Updates)"
-    echo -e "  ${RED}0)${NC} ❌ Sair"
+    echo -e "  ${GREEN}1)${NC} Setup Inicial Completo"
+    echo -e "  ${GREEN}2)${NC} Instalar Pacotes (Lista Híbrida)"
+    echo -e "  ${GREEN}3)${NC} Organizar Arquivos importantes (Configs)"
+    echo -e "  ${GREEN}4)${NC} Segurança (Firewall + Warp VPN)"
+    echo -e "  ${GREEN}5)${NC} Manutenção Completa (Limpeza + Updates)"
+    echo -e "  ${RED}0)${NC} Sair"
     echo ""
     echo -e "${BLUE}=================================================${NC}"
     read -p "Opção: " choice
@@ -41,24 +41,19 @@ while true; do
             pause
             ;;
         2)
-            sudo $BASE_DIR/setup/install_hybrid.sh
+            sudo $BASE_DIR/scripts/installers/menu.sh #pronto!
             pause
             ;;
         3)
-            sudo $BASE_DIR/setup/install_gaming.sh
+            echo "Função ainda não implementada no sistema"
             pause
             ;;
         4)
-            sudo $BASE_DIR/security/firewall.sh
-            echo ""
-            read -p "Deseja instalar/conectar o Cloudflare Warp agora? (s/n): " INSTALL_WARP
-            if [[ "$INSTALL_WARP" =~ ^[Ss]$ ]]; then
-                 $BASE_DIR/security/cloudfire_warp.sh
-            fi
+            sudo $BASE_DIR/security/config_warp_client.sh #pronto!
             pause
             ;;
-        5)
-            sudo $BASE_DIR/maintenance/full_maintenance.sh
+        5)  
+            sudo $BASE_DIR/maintenance/maintenance_menu.sh #pronto!
             pause
             ;;
         0)
