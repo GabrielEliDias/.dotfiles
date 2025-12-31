@@ -1,0 +1,21 @@
+# Exemplo de como organizar com suas informações
+
+[user]
+    name = Seu Nome Aqui
+    email = seu_email@exemplo.com
+
+[core]
+    editor = code --wait # Editor padrão (VS Code, por exemplo)
+    autocrlf = true # Ajusta fim de linha (Windows)
+
+[alias]
+    # Atalhos para comandos comuns
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
+[color]
+    # Habilita cores no terminal
+    ui = auto
