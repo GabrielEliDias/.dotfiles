@@ -4,12 +4,25 @@ set -e
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-sudo "$BASE_DIR/firewall.sh"
+# --- Verificação e Instalação do Firewall (UFW) ---
+if ! command -v ufw &> /dev/null; then
+    echo "UFW não encontrado. Iniciando configuração do firewall..."
+    sudo "$BASE_DIR/firewall.sh"
+else
+    echo "UFW já está instalado. Pulando etapa."
+fi
 
 echo ""
-read -p "Deseja instalar o Cloudflare Warp agora? (s/n): " INSTALL_WARP
-if [[ "$INSTALL_WARP" =~ ^[Ss]$ ]]; then
-     sudo "$BASE_DIR/cloudflare_warp.sh"
+
+# --- Verificação e Instalação do Cloudflare Warp ---
+if ! command -v warp-cli &> /dev/null; then
+    # O Warp não existe, então perguntamos se quer instalar
+    read -p "Deseja instalar o Cloudflare Warp agora? (s/n): " INSTALL_WARP
+    if [[ "$INSTALL_WARP" =~ ^[Ss]$ ]]; then
+        sudo "$BASE_DIR/cloudflare_warp.sh"
+    fi
+else
+    echo "Cloudflare Warp Client já está instalado. Pulando instalação."
 fi
 
 if command -v warp-cli &> /dev/null; then
