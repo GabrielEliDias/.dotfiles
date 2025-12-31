@@ -37,7 +37,7 @@ while true; do
 
     case $choice in
         1)
-            $BASE_DIR/setup/setup_git.sh
+            $BASE_DIR/scripts/complete_instalation.sh #pronto!
             pause
             ;;
         2)
