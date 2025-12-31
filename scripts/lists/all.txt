@@ -2,6 +2,7 @@
 # Gerenciadores suportados: apt | flatpak | snap
 
 # --- Utilitários de Terminal (Core) ---
+apt:stow
 apt:curl
 apt:wget
 apt:git
