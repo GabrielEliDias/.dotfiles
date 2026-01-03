@@ -1,23 +1,26 @@
-# --- Utilitários Básicos ---
-curl
-wget
-git
-htop
-btop      # Visualizador de recursos moderno
-neofetch
-tree      # Visualizador de diretórios
-vim       # Editor de texto terminal
-tmux      # Multiplexador de terminal
+# Formato: gerenciador:pacote # comentário opcional
+# Gerenciadores suportados: apt | flatpak | snap
+
+# --- Utilitários de Terminal (Core) ---
+apt:stow
+apt:curl
+apt:wget
+apt:git
+apt:htop
+apt:btop                    # Monitor de recursos moderno
+apt:neofetch                # Info do sistema
+apt:tree                    # Visualizador de estrutura de pastas
+apt:vim                     # Editor de texto
+apt:tmux                    # Multiplexador de terminal
+apt:zsh                     # Shell robusto
 
 # --- Compactação ---
-unzip
-p7zip-full
-unrar
+apt:unzip
+apt:p7zip-full
+apt:unrar                   # Para arquivos .rar
 
 # --- Multimídia e Desktop ---
-vlc
-gimp
-flameshot # Melhor ferramenta de Print Screen
-
-# --- Outros ---
-# discord  <-- O Discord no Debian geralmente é melhor via Flatpak ou .deb manual
+apt:vlc                     # Player de vídeo
+apt:flameshot               # Print screen
+flatpak:org.gimp.GIMP       # Gimp (Versão mais nova)
+flatpak:org.inkscape.Inkscape # Inkscape
