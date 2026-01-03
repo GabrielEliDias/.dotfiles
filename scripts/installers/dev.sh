@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LIST_FILE="$SCRIPT_DIR/scripts/lists/dev.txt"
+LIST_FILE="$SCRIPT_DIR/lists/dev.txt"
 APT_TO_INSTALL=""
 MANUAL_STEPS=()
 
