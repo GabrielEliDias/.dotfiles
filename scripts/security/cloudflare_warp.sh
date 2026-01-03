@@ -17,6 +17,7 @@ sudo apt update -qq
 
 echo "[4/6] Instalando o Cloudflare Warp Client..."
 sudo apt install cloudflare-warp -y
+sleep 10
 
 echo "[5/6] Registrando o dispositivo (Nova Sintaxe)..."
 sudo warp-cli registration new || true
