@@ -8,7 +8,6 @@ apt:wget
 apt:git
 apt:htop
 apt:btop                    # Monitor de recursos moderno
-apt:neofetch                # Info do sistema
 apt:tree                    # Visualizador de estrutura de pastas
 apt:vim                     # Editor de texto
 apt:tmux                    # Multiplexador de terminal
@@ -17,7 +16,6 @@ apt:zsh                     # Shell robusto
 # --- Compactação ---
 apt:unzip
 apt:p7zip-full
-apt:unrar                   # Para arquivos .rar
 
 # --- Multimídia e Desktop ---
 apt:vlc                     # Player de vídeo
